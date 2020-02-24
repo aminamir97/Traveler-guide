@@ -1,44 +1,32 @@
 package com.example.travelerguide;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.HorizontalScrollView;
 
-public class MainActivity extends AppCompatActivity {
-    HorizontalScrollView scroll;
-    int i=0;
+import androidx.appcompat.app.AppCompatActivity;
 
+public class Splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        scroll = findViewById(R.id.scroll);
+        setContentView(R.layout.activity_splash);
 
 
-        new CountDownTimer(1000, 5000) {
+
+        new CountDownTimer(3000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                scroll.scrollTo(3,0);
-
-
 
             }
 
             @Override
             public void onFinish() {
-                start();
+                Intent intent  = new Intent(Splash.this , MainActivity.class);
+                startActivity(intent);
 
             }
         }.start();
-
-
-
-
     }
 }
