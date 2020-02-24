@@ -116,13 +116,20 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
     <GridLayout
-        android:layout_margin="30dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="2"
         android:rowCount="2"
+        android:layout_margin="20dp"
         android:layout_gravity="center"
+        android:scrollbars="horizontal"
+        android:columnOrderPreserved="false"
+
 
         android:id="@+id/menu" >
         <ImageView
@@ -166,6 +173,7 @@
 
 
     </GridLayout>
+            </HorizontalScrollView>
 
     <LinearLayout
         android:layout_width="wrap_content"
