@@ -23,9 +23,12 @@
 
 
     <LinearLayout
+        android:background="@drawable/border"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
 
         >
 
@@ -69,6 +72,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="bottom"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
         >
 
         <TextView
@@ -91,15 +96,19 @@
             android:layout_gravity="left"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/adminLogin"
+
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Admin Login"
+            android:onClick="adminLogin"
             android:background="@color/cardview_light_background"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            />
 
 
 

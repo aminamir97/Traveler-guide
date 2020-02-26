@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
@@ -53,6 +54,10 @@ public class Login extends AppCompatActivity {
     // Google Sign In button .
     com.google.android.gms.common.SignInButton signInButton;
 
+    EditText adminLogin;
+    String dbpass="";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,28 +68,7 @@ public class Login extends AppCompatActivity {
         // get reference to 'users' node
         mFirebaseDatabase = mFirebaseInstance.getReference();
 
-        String x = mFirebaseInstance.getReference("admins").child("malak").getPath().toString();
-
-        Toast.makeText(Login.this,x,Toast.LENGTH_LONG).show();
-
-
-        mFirebaseInstance.getReference("admins").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Toast.makeText(Login.this,dataSnapshot.getValue().toString(),Toast.LENGTH_LONG).show();
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
-
-
-
+        adminLogin = findViewById(R.id.adminLogin);
 
         signInButton = (com.google.android.gms.common.SignInButton)findViewById(R.id.signin);
 
@@ -185,5 +169,41 @@ public class Login extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public void adminLogin(View view) {
+
+        mFirebaseInstance.getReference("admins").child("malak").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                dbpass = dataSnapshot.getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+        if(!adminLogin.getText().toString().equals(""))
+        {
+            if(adminLogin.getText().toString().equals(dbpass))
+            {
+                Toast.makeText(Login.this,"Good intenet ",Toast.LENGTH_LONG).show();
+                //make intenet for main admin page
+
+            }else
+                adminLogin.setError("Wrong password !");
+
+
+
+
+        }else
+            Toast.makeText(Login.this,"Fill password",Toast.LENGTH_LONG).show();
+
+
+
     }
 }
