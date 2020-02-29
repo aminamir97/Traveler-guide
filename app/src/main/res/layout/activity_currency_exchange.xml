@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrencyExchange"
+    android:background="#2980B9"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"
+                android:layout_margin="20dp"
+                android:background="@drawable/border"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency Exchange"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            >
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/fromCurrency"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:entries="@array/currincies"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amoutn"
+                android:id="@+id/moneyAmount"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/toCurrency"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:entries="@array/currincies"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:text="Exchange"
+                android:background="@drawable/border"
+                android:onClick="exchnageBtn"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuurency Result = "
+                android:textSize="20dp"
+
+                android:id="@+id/resultText"
+                android:textColor="#006400"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                />
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+</LinearLayout>

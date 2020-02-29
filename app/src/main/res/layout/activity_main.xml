@@ -23,21 +23,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@drawable/border"
         >
 
     <ImageView
+        android:id="@+id/profPic"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:src="@drawable/tourist"/>
+        android:src="@drawable/tourist"
+        android:foreground="@drawable/imagecorners"/>
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_margin="20dp">
 
 
         <TextView
@@ -52,8 +56,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="username"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:textStyle="bold"
+            android:layout_gravity="center"
             />
         </LinearLayout>
 
@@ -73,46 +78,54 @@
 
     <HorizontalScrollView
         android:id="@+id/scroll"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp">
+       android:layout_margin="1dp"
+        android:background="@drawable/border">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
             android:orientation="horizontal"
-            android:layout_gravity="center">
+            >
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:src="@drawable/tourist"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/thai"
+                />
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/biza"
+                />
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+
+                android:src="@drawable/ukrain"
+                />
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+
+                android:src="@drawable/ist"
+                />
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+
+                android:src="@drawable/india"
+                />
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+
+                android:src="@drawable/nat"
                 />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:src="@drawable/tourist" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:src="@drawable/tourist" />
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:src="@drawable/tourist" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -129,8 +142,7 @@
         android:layout_gravity="center"
         android:scrollbars="horizontal"
         android:columnOrderPreserved="false"
-
-
+        android:background="@drawable/border"
         android:id="@+id/menu" >
         <ImageView
             android:id="@+id/recomendation"
@@ -141,6 +153,7 @@
             android:background="@drawable/reccobuttin"
             android:layout_margin="10dp"
             android:clickable="true"
+            android:onClick="ReccomendationClick"
             />
         <ImageView
             android:id="@+id/coupons"
@@ -150,6 +163,8 @@
             android:layout_marginLeft="30dp"
             android:src="@drawable/couonsbtn"
             android:layout_margin="10dp"
+            android:onClick="CouponsClick"
+
             />
         <ImageView
             android:id="@+id/addspot"
@@ -159,6 +174,7 @@
             android:layout_marginLeft="30dp"
             android:src="@drawable/addspot"
             android:layout_margin="10dp"
+            android:onClick="AddSpotClick"
             />
         <ImageView
             android:id="@+id/about"
@@ -168,6 +184,7 @@
             android:layout_marginLeft="30dp"
             android:src="@drawable/exchangebutton"
             android:layout_margin="10dp"
+            android:onClick="exchnageCurrencyClick"
             />
 
 
@@ -179,7 +196,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:onClick="signout">
 
         <Button
             android:layout_width="50dp"

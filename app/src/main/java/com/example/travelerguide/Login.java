@@ -153,8 +153,11 @@ public class Login extends AppCompatActivity {
                             // Hiding Login in button.
                             signInButton.setVisibility(View.GONE);
 
+                            Intent intent = new Intent(Login.this,MainActivity.class);
+                            startActivity(intent);
 
-                            Toast.makeText(Login.this,firebaseUser.getDisplayName() +"\n"+firebaseUser.getPhoneNumber()+"\n"+firebaseAuth.getCurrentUser(),Toast.LENGTH_LONG).show();
+
+                           // Toast.makeText(Login.this,firebaseUser.getDisplayName() +"\n"+firebaseUser.getPhoneNumber()+"\n"+firebaseAuth.getCurrentUser(),Toast.LENGTH_LONG).show();
 
 
 

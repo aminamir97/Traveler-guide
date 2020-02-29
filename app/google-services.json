@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "990640453061",
+    "firebase_url": "https://traveler-guide-e273a.firebaseio.com",
+    "project_id": "traveler-guide-e273a",
+    "storage_bucket": "traveler-guide-e273a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990640453061:android:90347471f82fca7c5d07ac",
+        "android_client_info": {
+          "package_name": "com.example.travelerguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990640453061-kddkrnkruvfi3idr9l4b1jrgomchelvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.travelerguide",
+            "certificate_hash": "8e1c256320f8e641ce962bf8788126effee61473"
+          }
+        },
+        {
+          "client_id": "990640453061-0j7v9opppe7akj5fdntsq6gk603imn9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEi2NMAch9byAXo4g4eu5bY9p-ov43IF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990640453061-0j7v9opppe7akj5fdntsq6gk603imn9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

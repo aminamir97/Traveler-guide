@@ -9,11 +9,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class Splash extends AppCompatActivity {
     public FirebaseAuth firebaseAuth;
     Intent intent;
+    FirebaseUser firebaseUser;
 
 
 
@@ -45,7 +47,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void onFinish() {
 
-                if(!firebaseAuth.getCurrentUser().equals(null))
+                if(firebaseAuth.getCurrentUser()!=null)
                      intent  = new Intent(Splash.this , MainActivity.class);
                 else
                      intent  = new Intent(Splash.this , Login.class);
