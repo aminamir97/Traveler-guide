@@ -129,5 +129,6 @@ public class AddSpot extends AppCompatActivity {
         databaseReference.push().setValue(newspot);
 
 
+
     }
 }
