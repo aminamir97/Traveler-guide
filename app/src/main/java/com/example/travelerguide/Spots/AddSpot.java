@@ -124,7 +124,7 @@ public class AddSpot extends AppCompatActivity {
                 spotname.getText().toString() ,
                 imageURl ,
                 ratingBar.getRating()+"" ,
-                "comments");
+                "commen");
 
         databaseReference.push().setValue(newspot);
 
